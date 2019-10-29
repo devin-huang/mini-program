@@ -6,6 +6,8 @@
 
 1.1 云服务引用
 
+1.2 async await与API方式引用（最优解决方式）
+
 2. 数据库
 
 3. 环境
@@ -30,4 +32,8 @@ https://www.jianshu.com/p/0d631d3b1983
 
 ## rpx vw/vh 单位
 
-1px = viewport / 750 （viewport代表当前设备宽度）
+`1rpx = (viewport / 750)px  //（viewport代表当前设备宽度）`
+
+## 图片优化
+
+https://imagecompressor.com/zh/
