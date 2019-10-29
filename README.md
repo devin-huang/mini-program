@@ -4,9 +4,11 @@
 
 1. 云函数
 
-1.1 云服务引用
+https://www.jianshu.com/p/e3de2c605506
 
-1.2 async await与API方式引用（最优解决方式）
+1.1 云服务引用（全局常量） `var app = getApp()`
+
+1.2 async await与API模块化引用（最优解决方式）
 
 2. 数据库
 
