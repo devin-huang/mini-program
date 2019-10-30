@@ -36,6 +36,12 @@ https://www.jianshu.com/p/0d631d3b1983
 
 `1rpx = (viewport / 750)px  //（viewport代表当前设备宽度）`
 
+## 云开发-上传
+
+直接使用云开发提供Demo即可实现
+PC端会失败
+真机调试成功
+
 ## 图片优化
 
 https://imagecompressor.com/zh/
