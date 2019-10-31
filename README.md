@@ -44,7 +44,7 @@ miniprogram：
 
 ## 小程序使用iconfont
 
-[实现方式](https://www.jianshu.com/p/0d631d3b1983)
+[参考文章](https://www.jianshu.com/p/0d631d3b1983)
 
 1. https://www.iconfont.cn/home/index 下载
 
