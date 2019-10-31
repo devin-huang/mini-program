@@ -85,9 +85,9 @@ miniprogram：
 
 微信支付 + 云开发参考： 
 
-[https://ruby-china.org/topics/38786](https://ruby-china.org/topics/38786) 
-
 [https://developers.weixin.qq.com/community/develop/doc/000620ec5acb482103b7bf41d51804](https://developers.weixin.qq.com/community/develop/doc/000620ec5acb482103b7bf41d51804)
+
+[https://ruby-china.org/topics/38786](https://ruby-china.org/topics/38786) 
 
 Node后端:[https://blog.csdn.net/qq_36607860/article/details/86159825](https://blog.csdn.net/qq_36607860/article/details/86159825)
 
