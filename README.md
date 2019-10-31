@@ -31,9 +31,9 @@ miniprogram：
 
 1. 云函数 （需要上传并部署login / openapi）
 
-  1.1 云服务引用（参考：[全局常量](https://www.jianshu.com/p/e3de2c605506)）
+>  1.1 云服务引用（参考：[全局常量](https://www.jianshu.com/p/e3de2c605506)）
 
-  1.2 async await与API模块化引用（最优解决方式，参考api文件）
+>  1.2 async await与API模块化引用（最优解决方式，参考api文件）
 
 2. 数据库
 
