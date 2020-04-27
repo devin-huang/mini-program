@@ -33,7 +33,7 @@ miniprogram：
 
 >  1.1 云服务引用（参考：[全局常量](https://www.jianshu.com/p/e3de2c605506)）
 
->  1.2 async await与API模块化引用（最优解决方式，参考api文件）
+>  1.2 async await与API模块化引用 *小程序是不支持 async-await 语法的，可以使用 Facebook 开源库 regenerator
 
 2. 数据库
 
@@ -54,16 +54,51 @@ miniprogram：
 
 4. iconfont icon-xx
 
+## 全局守卫（全局判断是否登录）：https://www.jianshu.com/p/8f33a38a671a
+
+## 全局变量
+```
+const app = getApp() //全局app.js
+app.globalData.userInfo //引用方式
+```
+
 ## 自定义组件的引用
+
+### 全局（app.json）、局部引用（当前文件夹中**.json）
 
 ### 父子组件传值/事件
 
-```
-父组传递值至子组件： properties
+- 父组操作子组件方法：使用`this.selectComponent()`操作子组件方法
 
-父组操作子组件方法：使用this.selectComponent()操作子组件方法
-子组件触发父组件方法： this.triggerEvent()
+- 父组传递值至子组件：`<parent prop="{{hello}}" />` 与 `properties: {prop: null}` 、 `this.prop` 
+
+- 子组件触发父组件方法： `this.triggerEvent()`, 类似Vue方式
+
+### 布局组件引用（头部、尾部等） 或者动态家在组件
+
 ```
+  <import src='./head.wxml' />
+  <template is="head" data="{{data}}"></template>
+```
+
+## WXML中使用函数： 
+
+*.wxml
+```
+  <view>{{ parse.color() }}</view>
+  <wxs module="parse">
+    module.exports = {
+      color: function () {
+        // do something
+        return **
+      }
+    }
+  </wxs>
+```
+
+## 需要在WXML引用库的方式：Date中使用函数赋值： `Date: {isNumber: util.isNumber()}`
+
+## `wx.getStorageSync('key')` 用于保存token、角色等信息
 
 ## rpx vw/vh 单位
 
@@ -80,6 +115,12 @@ miniprogram：
 ## 图片优化
 
 [https://imagecompressor.com/zh/](https://imagecompressor.com/zh/)
+
+## 多图上传优化
+
+- 异步加载
+
+- canvas优化质量（最小清晰度）
 
 ## 微信支付
 
