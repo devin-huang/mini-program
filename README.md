@@ -10,22 +10,13 @@ miniprogram：
   |- home                              主页
     |- first                           主页 "Part one" 组件
   |- index                             下列均云开发Demo页面
-  |- addFunction                       
-  |- chooseLib
-  |- databaseGuide
-  |- deployFunctions
-  |- openapi
-  |- storageConsole
-  |- userConsole
 |- style   
 |- utils                               工具类
-  |- app.js                            全局JavaScript
-  |- app.json                          全局路由/导航栏/框配置
-  |- app.wxss                          全局样式（组件内无法继承）
-  |- sitemap.json
 |- README.md                         
 |- project.config.json               
 ```
+
+
 
 ## 云开发
 
@@ -40,21 +31,16 @@ miniprogram：
 3. 环境（支持创建两个环境，所以：project-dev, project-pro）
 
 4. 非关系型数据库
-   
 
-## 小程序使用iconfont
 
-[参考文章](https://www.jianshu.com/p/0d631d3b1983)
 
-1. https://www.iconfont.cn/home/index 下载
+## 全局守卫
 
-2. https://transfonter.org/ 转换ttf格式
+  1. api请求时判断是否含有token，没有则重定向到login
+  
+  2. 第三方库（全局判断是否登录）：https://www.jianshu.com/p/8f33a38a671a
 
-3. 转换下载得到stylesheet.css
 
-4. iconfont icon-xx
-
-## 全局守卫（全局判断是否登录）：https://www.jianshu.com/p/8f33a38a671a
 
 ## 全局变量
 ```
@@ -62,26 +48,30 @@ const app = getApp() //全局app.js
 app.globalData.userInfo //引用方式
 ```
 
+
+
 ## 自定义组件的引用
 
-### 全局（app.json）、局部引用（当前文件夹中**.json）
+### 全局声明引用（app.json）、局部声明引用（当前文件夹中**.json）
 
 ### 父子组件传值/事件
 
 - 父组操作子组件方法：使用`this.selectComponent()`操作子组件方法
 
-- 父组传递值至子组件：`<parent prop="{{hello}}" />` 与 `properties: {prop: null}` 、 `this.prop` 
+- 父组传递值至子组件：`<parent prop="{{hello}}" />` 与 `properties: {prop: null}` 、 `this.properties.prop` 
 
 - 子组件触发父组件方法： `this.triggerEvent()`, 类似Vue方式
 
-### 布局组件引用（头部、尾部等） 或者动态家在组件
+### 局部组件声明引用（头部、尾部等） 或者动态加载组件
 
 ```
   <import src='./head.wxml' />
   <template is="head" data="{{data}}"></template>
 ```
 
-## WXML中使用函数： 
+
+
+## WXML中使用函数方式： 
 
 *.wxml
 ```
@@ -96,9 +86,37 @@ app.globalData.userInfo //引用方式
   </wxs>
 ```
 
+
+
 ## 需要在WXML引用库的方式：Date中使用函数赋值： `Date: {isNumber: util.isNumber()}`
 
+
+
 ## `wx.getStorageSync('key')` 用于保存token、角色等信息
+
+
+
+## 引用第三方UI库iview、vant等
+
+
+
+## input获取焦点时布局上移
+
+
+
+## 小程序使用iconfont
+
+[参考文章](https://www.jianshu.com/p/0d631d3b1983)
+
+1. https://www.iconfont.cn/home/index 下载
+
+2. https://transfonter.org/ 转换ttf格式
+
+3. 转换下载得到stylesheet.css
+
+4. iconfont icon-xx
+
+
 
 ## rpx vw/vh 单位
 
@@ -106,21 +124,29 @@ app.globalData.userInfo //引用方式
 
 `1vw/vh // 代表当前设备的宽度/高度百分之一`
 
+
+
 ## 云开发-上传
 
 直接使用云开发提供Demo即可实现（PC端会失败， 真机调试成功）
 
 * 图片存放在 云开发->存储中
 
+
+
 ## 图片优化
 
 [https://imagecompressor.com/zh/](https://imagecompressor.com/zh/)
+
+
 
 ## 多图上传优化
 
 - 异步加载
 
 - canvas优化质量（最小清晰度）
+
+
 
 ## 微信支付
 
